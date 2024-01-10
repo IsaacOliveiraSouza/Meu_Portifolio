@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Sobre mim</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+       <li class="nav-item">
+          <a class="nav-link" href="portifolio.html">Portifólio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contatos.html">Contatos</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+  <div class="jumbotron">
+    <img src="perfil img.enc" alt="" width="200px" class="float-right">
+    <h1 class="display-4" id="nome">.asds</h1> 
+    <h3 >Isaac de Oliveira Souza</h3>
+    <h4>Full Stack Developper</h4>
+    
+    
+    <p class="lead">Formado no técnico de tecnologia da informação, atuando na área onde sou apaixonado.
+      Tenho 18 anos e atuo como estagiário,<br> envolvendo varios campos dentro de Ti.
+      Tenho conhecimento em algumas tecnologias:</p>
+<img width="40" height="30"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+<img width="40" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+<img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg" />
+<img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+          
+          
+    
+
+    <hr class="my-4">
+    <p>Aqui embaixo você pode apreciar meu currículo :)</p>
+    <a class="btn btn-primary btn-lg" href="Curriculo Isaac Oliveria.pdf" download role="button">Download CV</a>
+  </div>
+  <script>
+ const textContainer = document.getElementById('nome');
+    const initialPhrase = "Hello World";
+    const phrases = [initialPhrase];
+    let currentPhraseIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+
+    function typeWriter() {
+      const currentPhrase = phrases[currentPhraseIndex];
+      const speed = isDeleting ? 50 : 150;
+
+      if (isDeleting) {
+        textContainer.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+      } else {
+        textContainer.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+      }
+
+      currentCharIndex = isDeleting ? currentCharIndex - 1 : currentCharIndex + 1;
+
+      if (!isDeleting && currentCharIndex === currentPhrase.length + 1) {
+        isDeleting = true;
+        setTimeout(typeWriter, 1000);
+      } else if (isDeleting && currentCharIndex === 1) {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(typeWriter, 500);
+      } else {
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', typeWriter);
+  </script> 
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
